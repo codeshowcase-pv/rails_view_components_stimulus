@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">Новый пост.</div>
+  <div class="card-body">
+    <form method="post" action="/post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="text" name="author_name" class="form-control"
+             placeholder="Имя автора">
+      <textarea name="text" id="text" cols="30" rows="3" class="form-control mt-2"
+                placeholder="Текст поста"></textarea>
+
+      <button class="btn btn-primary mt-2 ml-auto">Отправить</button>
+    </form>
+  </div>
+</div>

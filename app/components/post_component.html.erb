@@ -1,0 +1,7 @@
+<div class="card my-2" data-controller="post" data-post-id-value="<%= @post[:id] %>">
+  <div class="card-header">Пост от <%= @post[:author_name] %>, за <%= @post[:created_at] %></div>
+  <div class="card-body"><%= @post[:text] %></div>
+  <div class="card-footer">
+    <button class="btn btn-danger" data-action="click->post#delete">Удалить</button>
+  </div>
+</div>

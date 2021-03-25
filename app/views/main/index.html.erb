@@ -1,0 +1,16 @@
+<div class="container">
+  <sl-details summary="Toggle">
+    Lorem ipsum
+  </sl-details>
+
+  <p><%= @posts.count %></p>
+  <div class="flex flex-column w-50 m-auto my-4">
+    <% @posts.each do |post| %>
+      <%= render(PostComponent.new(
+        post: post
+      )) %>
+  <% end %>
+  </div>
+
+  <%= render(PostCreateComponent.new) %>
+</div>
